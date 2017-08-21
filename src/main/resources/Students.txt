@@ -1,4 +1,0 @@
-1/Andriu/Perepelitsya/2017-08-21T08:30:48.259/434/2017-08-21T08:31:12.410/Subject{id=1, name='Math'} , Subject{id=2, name='English'} , 
-1/Andriu/Perepelitsya/2017-08-21T08:30:48.259/434/2017-08-21T08:31:12.410/Subject{id=1, name='Math'} , Subject{id=2, name='English'} , 
-2/Kolya/Marrchuk/2017-08-21T08:31:00.130/343/2017-08-21T08:31:00.130/Subject{id=1, name='Math'} , Subject{id=2, name='English'} , Subject{id=1, name='Math'} , 
-
