@@ -26,8 +26,6 @@ public class Student{
         this.subjects = subjects;
     }
 
-
-
     public int getId() {
         return id;
     }
@@ -81,6 +79,4 @@ public class Student{
                 ", subjects=" + subjects +
                 '}';
     }
-
-
 }

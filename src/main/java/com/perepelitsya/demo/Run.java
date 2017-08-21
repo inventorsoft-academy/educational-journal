@@ -25,7 +25,8 @@ public class Run {
         while (flag) {
             System.out.println("\n1 - Create new Student\n2 - Update Student\n3 - Delete Student\n4 - Create new Subject\n" +
                     "5 - Update Subject\n6 - Delete Subject\n7 - GetAllStudent\n8 - GetAllSubject\n" +
-                    "9 - Work with file and Json");
+                    "9 - Work with file and Json" + "\n" +
+                    "10 - exit");
 
             switch (sc.nextInt()) {
                 case 1:
@@ -64,7 +65,7 @@ public class Run {
                     boolean flagForFile = true;
 
                     while (flagForFile) {
-                        System.out.println("1 - Write&Read to Txt\n2 - Write&Read to Json");
+                        System.out.println("Txt - Write&Read to Txt\nJson - Write&Read to Json");
                         String name = sc.next();
                         if (name.equalsIgnoreCase("txt")) {
                             FileManager Igor = new FileManagerService();

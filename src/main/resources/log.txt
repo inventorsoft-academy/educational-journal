@@ -1,53 +1,6 @@
-2017-08-21 12:32:32 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T12:32:32.994
-2017-08-21 12:32:35 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:32:35 INFO  ManagerService:153 - Try to save new subject
-2017-08-21 12:32:37 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:32:37 INFO  ManagerService:157 - Subject saved
-2017-08-21 12:32:38 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:32:47 INFO  ManagerService:42 - Try to add subject for student
-2017-08-21 12:32:49 INFO  ManagerService:52 - we add subject =  MATH
-2017-08-21 12:32:49 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:32:49 INFO  ManagerService:60 - Student created!
-2017-08-21 12:32:55 INFO  ManagerService:153 - Try to save new subject
-2017-08-21 12:32:58 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:32:58 INFO  ManagerService:157 - Subject saved
-2017-08-21 12:33:01 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:03 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:05 INFO  ManagerService:164 - Try to update subject
-2017-08-21 12:33:08 INFO  ManagerService:173 - try to change name of subject
-2017-08-21 12:33:13 INFO  ManagerService:178 - Subject updated
-2017-08-21 12:33:15 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:17 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:24 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:26 INFO  ManagerService:191 - Try to remove subject
-2017-08-21 12:33:26 INFO  ManagerService:198 - Everything ok. We remove our subject
-2017-08-21 12:33:28 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:32 INFO  ManagerService:71 - Lets find student who will be update
-2017-08-21 12:33:40 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:40 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:41 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:41 INFO  FileManagerService:57 - Try to write list of students to file Students.txt
-2017-08-21 12:33:44 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:44 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:46 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:46 INFO  FileManagerService:34 - Try to write list of subjects to file Subjects.txt
-2017-08-21 12:33:48 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:48 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:49 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:50 INFO  FileManagerService:37 - Json student created
-2017-08-21 12:33:51 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:33:51 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:53 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:33:53 INFO  FileManagerService:47 - Json subject created
-2017-08-21 12:33:55 INFO  Run:124 - !!!!!!!!!!!!Close our programm!!!!!!
-2017-08-21 12:38:17 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T12:38:17.352
-2017-08-21 12:38:30 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:38:30 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:38:32 INFO  FileManagerService:94 - try ro read students from file
-2017-08-21 12:38:39 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T12:38:39.310
-2017-08-21 12:38:43 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:38:43 INFO  ManagerService:211 - we see all info about our subject
-2017-08-21 12:38:45 INFO  FileManagerService:115 - try ro read subjects from file
-2017-08-21 12:38:45 ERROR FileManagerService:126 - We cannot read our subjects
-2017-08-21 12:38:51 INFO  ManagerService:206 - we see all info about our student
-2017-08-21 12:38:51 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 21:36:55 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T21:36:55.510
+2017-08-21 21:36:56 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 21:36:56 INFO  ManagerService:153 - Try to save new subject
+2017-08-21 21:36:58 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 21:36:58 INFO  ManagerService:157 - Subject saved
+2017-08-21 21:36:59 INFO  ManagerService:211 - we see all info about our subject

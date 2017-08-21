@@ -13,20 +13,15 @@ import java.util.List;
 public class FileManagerService implements FileManager {
 
     private final static Logger log = Logger.getLogger(FileManagerService.class);
-    private static final String INPUT = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\Students.txt";
-    private static final String INPUTSUBJECT = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\Subjects.txt";
+
+    private static final String INPUT = "src\\main\\resources\\Students.txt";
+    private static final String INPUTSUBJECT = "src\\main\\resources\\Subjects.txt";
 
     File fileWriter = new File(INPUT);
     File fileWriterSubject = new File(INPUTSUBJECT);
 
     BufferedWriter writer;
     BufferedReader reader;
-
-    private ManagerService managerService = new ManagerService();
-
-
-
-
 
     @Override
     public void writeToFileSubject(List<Subject> subjectList) {
@@ -99,14 +94,13 @@ public class FileManagerService implements FileManager {
             String[] line;
             while ((s = reader.readLine()) != null) {
                 line = s.split("/");
-                studentList.add(new Student(Integer.parseInt(line[1]), String.valueOf(line[2]), String.valueOf(line[3]), LocalDateTime.parse(line[4]),
-                        Integer.parseInt(line[5]), LocalDateTime.parse(line[6]), List.class.cast(line[7])));
+                studentList.add(new Student(Integer.parseInt(line[0]), line[1], line[2], LocalDateTime.parse(line[3]),
+                        Integer.parseInt(line[4]), LocalDateTime.parse(line[5]), List.class.cast(line[6])));
             }
             log.info("Our student in list");
-        } catch (IOException e) {
+        } catch (IOException | NumberFormatException | ClassCastException e) {
             log.error("We cannot read our subjects");
             e.printStackTrace();
-
         }
         return studentList;
     }
@@ -124,9 +118,9 @@ public class FileManagerService implements FileManager {
                 subjectList.add(new Subject(Integer.parseInt(line[1]), line[2]));
             }
             log.info("We read all our subjects to list subjects");
-        } catch (IOException | NumberFormatException ex) {
+        } catch (IOException | NumberFormatException e) {
             log.error("We cannot read our subjects");
-            ex.printStackTrace();
+            e.printStackTrace();
         }
         return subjectList;
     }

@@ -2,7 +2,8 @@ package com.perepelitsya.service.impls;
 
 import com.perepelitsya.model.Student;
 import com.perepelitsya.model.Subject;
-import com.perepelitsya.service.interfaces.Manager;
+import com.perepelitsya.service.interfaces.StudentManager;
+import com.perepelitsya.service.interfaces.SubjectManager;
 import org.apache.log4j.Logger;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ import java.util.Scanner;
 /**
  * Created by Andriu on 8/14/2017.
  */
-public class ManagerService implements Manager {
+public class ManagerService implements StudentManager, SubjectManager {
 
     private final static Logger log = Logger.getLogger(ManagerService.class);
 

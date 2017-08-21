@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
  */
 public class Main {
     private final static Logger log = Logger.getLogger(Main.class);
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         log.info("!!!!!!!!!!!Programm started!!!!!!!!!!!" + LocalDateTime.now());
         try {
             new Run().init();

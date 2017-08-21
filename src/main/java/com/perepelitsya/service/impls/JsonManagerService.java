@@ -1,14 +1,12 @@
 package com.perepelitsya.service.impls;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import com.perepelitsya.model.Student;
 import com.perepelitsya.model.Subject;
 import com.perepelitsya.service.interfaces.FileManager;
 import org.apache.log4j.Logger;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,15 +15,11 @@ import java.util.List;
  * Created by Andriu on 8/20/2017.
  */
 public class JsonManagerService implements FileManager {
+
     private final static Logger log = Logger.getLogger(FileManagerService.class);
-    private final static String studentFile = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\student.json";
-    private final static String subjectFile = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\subject.json";
 
-    private ManagerService managerService = new ManagerService();
-
-    List<Student > studentList = new ArrayList<>(managerService.getAllStudent());
-    List<Subject> subjectList = new ArrayList<>(managerService.getAllSubject());
-
+    private final static String studentFile = "src\\main\\resources\\student.json";
+    private final static String subjectFile = "src\\main\\resources\\subject.json";
 
     ObjectMapper mapper = new ObjectMapper();
 
@@ -36,7 +30,6 @@ public class JsonManagerService implements FileManager {
             mapper.writeValue(new File(studentFile), student);
             log.info("Json student created");
         }
-
     }
 
     @Override
@@ -49,14 +42,14 @@ public class JsonManagerService implements FileManager {
     }
 
     @Override
-    public List<Student>  readFromFileStudent() throws IOException {
-        List<Subject> subjectList = new ArrayList<>();
+    public List<Student> readFromFileStudent() throws IOException {
+        List<Student> studentList = new ArrayList<>();
         mapper.readValue(new File(studentFile), Student.class);
         return studentList;
     }
 
     @Override
-    public List<Subject>  readFromFileSubject() throws IOException {
+    public List<Subject> readFromFileSubject() throws IOException {
         List<Subject> subjectList = new ArrayList<>();
         mapper.readValue(new File(subjectFile), Subject.class);
         return subjectList;
