@@ -1,13 +1,16 @@
 package com.perepelitsya.service.impls;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.perepelitsya.model.Student;
 import com.perepelitsya.model.Subject;
 import com.perepelitsya.service.interfaces.FileManager;
 import org.apache.log4j.Logger;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,9 +18,16 @@ import java.util.List;
  */
 public class JsonManagerService implements FileManager {
     private final static Logger log = Logger.getLogger(FileManagerService.class);
+    private final static String studentFile = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\student.json";
+    private final static String subjectFile = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\subject.json";
 
-    private final static String studentFile = "C:\\Users\\Andriu\\Desktop\\cources\\src\\main\\resources\\student.json";
-    private final static String subjectFile = "C:\\Users\\Andriu\\Desktop\\cources\\src\\main\\resources\\subject.json";
+    private ManagerService managerService = new ManagerService();
+
+    List<Student > studentList = new ArrayList<>(managerService.getAllStudent());
+    List<Subject> subjectList = new ArrayList<>(managerService.getAllSubject());
+
+
+    ObjectMapper mapper = new ObjectMapper();
 
     @Override
     public void writeToFileStudent(List<Student> studentList) throws IOException {
@@ -26,6 +36,7 @@ public class JsonManagerService implements FileManager {
             mapper.writeValue(new File(studentFile), student);
             log.info("Json student created");
         }
+
     }
 
     @Override
@@ -33,33 +44,21 @@ public class JsonManagerService implements FileManager {
         for (Subject subject : subjectList) {
             ObjectMapper mapper = new ObjectMapper();
             mapper.writeValue(new File(subjectFile), subject);
-        }
-        log.info("Json subject created");
-
-    }
-
-    @Override
-    public void readFromFileStudent(List<Student> studentList) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        for (Student student : studentList) {
-            try {
-                student = mapper.readValue(studentFile, Student.class);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            log.info("Json subject created");
         }
     }
 
     @Override
-    public void readFromFileSubject(List<Subject> subjectList) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        for (Subject subject : subjectList) {
-            try {
-                subject = mapper.readValue(subjectFile, Subject.class);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+    public List<Student>  readFromFileStudent() throws IOException {
+        List<Subject> subjectList = new ArrayList<>();
+        mapper.readValue(new File(studentFile), Student.class);
+        return studentList;
     }
 
+    @Override
+    public List<Subject>  readFromFileSubject() throws IOException {
+        List<Subject> subjectList = new ArrayList<>();
+        mapper.readValue(new File(subjectFile), Subject.class);
+        return subjectList;
+    }
 }

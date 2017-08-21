@@ -76,8 +76,7 @@ public class Run {
                                     break;
 
                                 case 2:
-                                    Igor.readFromFileStudent(Nataly.getAllStudent());
-                                    System.out.println(Nataly.getAllStudent());
+                                    System.out.println(Igor.readFromFileStudent());
                                     break;
 
                                 case 3:
@@ -85,8 +84,7 @@ public class Run {
                                     break;
 
                                 case 4:
-                                    Igor.readFromFileSubject(Nataly.getAllSubject());
-                                    System.out.println(Nataly.getAllSubject());
+                                    System.out.println(Igor.readFromFileSubject());
                                     break;
                                 default:
                                     System.out.println("Cannot understand");
@@ -102,8 +100,7 @@ public class Run {
                                     break;
 
                                 case 2:
-                                    Igor.readFromFileStudent(Nataly.getAllStudent());
-                                    System.out.println(Nataly.getAllStudent());
+                                    System.out.println(Igor.readFromFileStudent());
                                     break;
 
                                 case 3:
@@ -111,13 +108,13 @@ public class Run {
                                     break;
 
                                 case 4:
-                                    Igor.readFromFileSubject(Nataly.getAllSubject());
-                                    System.out.println(Nataly.getAllSubject());
+                                    System.out.println(Igor.readFromFileSubject());
+
                                     break;
-                                    default:
-                                        System.out.println("Dont understand");
+                                default:
+                                    System.out.println("Dont understand");
                             }
-                        } else  {
+                        } else {
                             flagForFile = false;
                         }
                     }

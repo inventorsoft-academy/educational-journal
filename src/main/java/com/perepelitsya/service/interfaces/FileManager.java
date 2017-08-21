@@ -15,7 +15,7 @@ public interface FileManager {
 
     void writeToFileSubject(List<Subject> subjectList) throws IOException;
 
-    void readFromFileStudent(List<Student> studentList) throws IOException;
+    List<Student>  readFromFileStudent() throws IOException;
 
-    void readFromFileSubject(List<Subject> subjectList) throws IOException;
+    List<Subject>  readFromFileSubject() throws IOException;
 }

@@ -7,19 +7,26 @@ import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileManagerService implements FileManager {
 
     private final static Logger log = Logger.getLogger(FileManagerService.class);
-    private static final String INPUT = "C:\\Users\\Andriu\\Desktop\\cources\\src\\main\\resources\\Students.txt";
-    private static final String INPUTSUBJECT = "C:\\Users\\Andriu\\Desktop\\cources\\src\\main\\resources\\Subjects.txt";
+    private static final String INPUT = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\Students.txt";
+    private static final String INPUTSUBJECT = "C:\\Users\\Andriu\\Desktop\\educational-journal\\src\\main\\resources\\Subjects.txt";
 
     File fileWriter = new File(INPUT);
     File fileWriterSubject = new File(INPUTSUBJECT);
 
     BufferedWriter writer;
     BufferedReader reader;
+
+    private ManagerService managerService = new ManagerService();
+
+
+
+
 
     @Override
     public void writeToFileSubject(List<Subject> subjectList) {
@@ -35,9 +42,9 @@ public class FileManagerService implements FileManager {
                 writer.append(line.toString());
                 writer.newLine();
             }
-                writer.flush();
-                writer.close();
-
+            writer.flush();
+            writer.close();
+            log.info("Students are in file");
         } catch (IOException ex) {
             log.info("Cannot to write list of subjects to file Subjects.txt" + ex.getMessage());
             ex.printStackTrace();
@@ -75,6 +82,7 @@ public class FileManagerService implements FileManager {
             writer.newLine();
             writer.flush();
             writer.close();
+            log.info("Subjects are in file");
         } catch (IOException ex) {
             log.error("Cannot  to write list of students to file Students.txt" + ex.getMessage());
             ex.printStackTrace();
@@ -82,7 +90,9 @@ public class FileManagerService implements FileManager {
     }
 
     @Override
-    public void readFromFileStudent(List<Student> studentList) {
+    public List<Student> readFromFileStudent() {
+        log.info("try ro read students from file");
+        List<Student> studentList = new ArrayList<>();
         try {
             reader = new BufferedReader(new FileReader(fileWriter));
             String s;
@@ -92,13 +102,19 @@ public class FileManagerService implements FileManager {
                 studentList.add(new Student(Integer.parseInt(line[1]), String.valueOf(line[2]), String.valueOf(line[3]), LocalDateTime.parse(line[4]),
                         Integer.parseInt(line[5]), LocalDateTime.parse(line[6]), List.class.cast(line[7])));
             }
+            log.info("Our student in list");
         } catch (IOException e) {
+            log.error("We cannot read our subjects");
             e.printStackTrace();
+
         }
+        return studentList;
     }
 
     @Override
-    public void readFromFileSubject(List<Subject> subjectList) {
+    public List<Subject> readFromFileSubject() {
+        log.info("try ro read subjects from file");
+        List<Subject> subjectList = new ArrayList<>();
         try {
             reader = new BufferedReader(new FileReader(fileWriterSubject));
             String subject;
@@ -108,10 +124,10 @@ public class FileManagerService implements FileManager {
                 subjectList.add(new Subject(Integer.parseInt(line[1]), line[2]));
             }
             log.info("We read all our subjects to list subjects");
-        } catch (IOException  | NumberFormatException ex) {
-
+        } catch (IOException | NumberFormatException ex) {
+            log.error("We cannot read our subjects");
             ex.printStackTrace();
         }
-
+        return subjectList;
     }
 }
