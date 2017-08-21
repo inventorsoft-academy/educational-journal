@@ -1,0 +1,86 @@
+2017-08-21 08:26:25 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:26:25.485
+2017-08-21 08:26:30 INFO  Run:123 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-21 08:28:31 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:28:31.526
+2017-08-21 08:28:46 INFO  Run:127 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-21 08:30:31 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:30:31.566
+2017-08-21 08:30:34 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:30:34 INFO  ManagerService:153 - Try to save new subject
+2017-08-21 08:30:35 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:30:35 INFO  ManagerService:157 - Subject saved
+2017-08-21 08:30:36 INFO  ManagerService:153 - Try to save new subject
+2017-08-21 08:30:39 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:30:39 INFO  ManagerService:157 - Subject saved
+2017-08-21 08:30:40 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:30:48 INFO  ManagerService:42 - Try to add subject for student
+2017-08-21 08:30:50 INFO  ManagerService:52 - we add subject =  Math
+2017-08-21 08:30:51 INFO  ManagerService:54 - we cannot add  subject =  English
+2017-08-21 08:30:51 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:30:51 INFO  ManagerService:60 - Student created!
+2017-08-21 08:30:53 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:31:00 INFO  ManagerService:42 - Try to add subject for student
+2017-08-21 08:31:02 INFO  ManagerService:52 - we add subject =  Math
+2017-08-21 08:31:04 INFO  ManagerService:54 - we cannot add  subject =  English
+2017-08-21 08:31:04 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:31:04 INFO  ManagerService:60 - Student created!
+2017-08-21 08:31:05 INFO  ManagerService:71 - Lets find student who will be update
+2017-08-21 08:31:08 INFO  ManagerService:77 - We find our student. Let get start to update him
+2017-08-21 08:31:12 INFO  ManagerService:83 - we change group 142 to = 434
+2017-08-21 08:31:12 INFO  ManagerService:90 - we change mark 2017-08-21T08:30:48.259 to = 2017-08-21T08:31:12.410
+2017-08-21 08:31:17 INFO  ManagerService:105 - we delete subject =  Math
+2017-08-21 08:31:17 ERROR ManagerService:113 - Student havent subjects
+2017-08-21 08:31:24 INFO  ManagerService:124 - we add subject =  Math
+2017-08-21 08:31:26 INFO  ManagerService:124 - we add subject =  English
+2017-08-21 08:31:28 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:31:46 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:31:46 INFO  FileManagerService:50 - Try to write list of students to file Students.txt
+2017-08-21 08:31:50 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:31:50 INFO  FileManagerService:27 - Try to write list of subjects to file Subjects.txt
+2017-08-21 08:31:55 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:31:57 INFO  FileManagerService:42 - Json student created
+2017-08-21 08:31:57 INFO  FileManagerService:42 - Json student created
+2017-08-21 08:32:05 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:32:05 INFO  FileManagerService:51 - Json subject created
+2017-08-21 08:32:05 INFO  FileManagerService:51 - Json subject created
+2017-08-21 08:32:10 INFO  Run:127 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-21 08:35:32 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:35:32.939
+2017-08-21 08:35:34 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:35:34 INFO  ManagerService:153 - Try to save new subject
+2017-08-21 08:35:39 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:35:39 INFO  ManagerService:157 - Subject saved
+2017-08-21 08:35:40 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:35:45 INFO  ManagerService:42 - Try to add subject for student
+2017-08-21 08:35:48 INFO  ManagerService:52 - we add subject =  Ukrainian
+2017-08-21 08:35:48 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:35:48 INFO  ManagerService:60 - Student created!
+2017-08-21 08:35:57 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:35:58 INFO  FileManagerService:42 - Json student created
+2017-08-21 08:36:02 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:36:02 INFO  FileManagerService:51 - Json subject created
+2017-08-21 08:36:04 INFO  Run:127 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-21 08:38:24 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:38:24.051
+2017-08-21 08:38:30 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:38:30 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:38:36 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:38:36 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:38:43 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:44:20 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:44:20.994
+2017-08-21 08:44:34 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:44:48 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:44:48.952
+2017-08-21 08:45:10 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:45:10 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:45:19 INFO  Run:127 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-21 08:48:47 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:48:47.192
+2017-08-21 08:49:18 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:49:18 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:49:30 INFO  ManagerService:206 - we see all info about our student
+2017-08-21 08:52:35 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:52:35.007
+2017-08-21 08:52:39 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:52:39 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:53:21 INFO  Run:127 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-21 08:53:42 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:53:42.097
+2017-08-21 08:53:47 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:53:47 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:57:05 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-21T08:57:05.879
+2017-08-21 08:57:11 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:57:11 INFO  ManagerService:211 - we see all info about our subject
+2017-08-21 08:57:15 INFO  Run:127 - !!!!!!!!!!!!Close our programm!!!!!!
