@@ -4,3 +4,263 @@
 2017-08-21 21:36:58 INFO  ManagerService:211 - we see all info about our subject
 2017-08-21 21:36:58 INFO  ManagerService:157 - Subject saved
 2017-08-21 21:36:59 INFO  ManagerService:211 - we see all info about our subject
+2017-08-22 21:10:15 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:10:15.545
+2017-08-22 21:10:38 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:10:38 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:10:40 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:10:40 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:10:41 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:10:46 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:10:47 INFO  ManagerService:53 - we add subject =  Math
+2017-08-22 21:10:48 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:10:48 INFO  ManagerService:61 - Student created!
+2017-08-22 21:10:51 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:10:51 INFO  FileManagerService:53 - Try to write list of students to file Students.txt
+2017-08-22 21:10:51 INFO  FileManagerService:81 - Subjects are in file
+2017-08-22 21:10:52 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:10:52 INFO  FileManagerService:30 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:10:52 INFO  FileManagerService:43 - Students are in file
+2017-08-22 21:10:54 INFO  FileManagerService:115 - try ro read subjects from file
+2017-08-22 21:10:54 ERROR FileManagerService:127 - We cannot read our subjects
+2017-08-22 21:11:09 INFO  FileManagerService:90 - try ro read students from file
+2017-08-22 21:14:48 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:14:48.403
+2017-08-22 21:14:49 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:14:49 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:14:52 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:14:52 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:14:53 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:14:57 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:14:58 INFO  ManagerService:53 - we add subject =  Engish
+2017-08-22 21:14:58 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:14:58 INFO  ManagerService:61 - Student created!
+2017-08-22 21:15:01 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:15:01 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:15:01 INFO  FileManagerService:80 - Subjects are in file
+2017-08-22 21:15:03 INFO  Run:125 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-22 21:15:16 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:15:16.357
+2017-08-22 21:15:18 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:15:18 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:15:20 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:15:20 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:15:21 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:15:24 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:15:25 INFO  ManagerService:53 - we add subject =  English
+2017-08-22 21:15:25 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:15:25 INFO  ManagerService:61 - Student created!
+2017-08-22 21:15:29 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:15:29 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:15:29 INFO  FileManagerService:80 - Subjects are in file
+2017-08-22 21:15:31 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:15:31 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:15:31 INFO  FileManagerService:42 - Students are in file
+2017-08-22 21:15:33 INFO  FileManagerService:115 - try ro read subjects from file
+2017-08-22 21:15:33 ERROR FileManagerService:127 - We cannot read our subjects
+2017-08-22 21:16:46 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:16:46.901
+2017-08-22 21:16:48 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:16:48 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:16:52 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:16:52 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:16:53 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:16:58 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:16:59 INFO  ManagerService:53 - we add subject =  Mathemetics
+2017-08-22 21:16:59 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:16:59 INFO  ManagerService:61 - Student created!
+2017-08-22 21:17:02 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:17:02 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:17:02 INFO  FileManagerService:80 - Subjects are in file
+2017-08-22 21:17:04 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:17:04 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:17:04 INFO  FileManagerService:42 - Students are in file
+2017-08-22 21:17:06 INFO  FileManagerService:115 - try ro read subjects from file
+2017-08-22 21:17:06 INFO  FileManagerService:125 - We read all our subjects to list subjects
+2017-08-22 21:17:10 INFO  FileManagerService:89 - try ro read students from file
+2017-08-22 21:19:22 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:19:22.692
+2017-08-22 21:19:25 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:19:25 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:19:27 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:19:27 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:19:29 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:19:32 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:19:33 INFO  ManagerService:53 - we add subject =  English
+2017-08-22 21:19:33 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:19:33 INFO  ManagerService:61 - Student created!
+2017-08-22 21:19:36 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:19:36 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:19:36 INFO  FileManagerService:80 - Subjects are in file
+2017-08-22 21:19:38 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:19:38 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:19:38 INFO  FileManagerService:42 - Students are in file
+2017-08-22 21:19:40 INFO  FileManagerService:120 - try ro read subjects from file
+2017-08-22 21:19:40 INFO  FileManagerService:130 - We read all our subjects to list subjects
+2017-08-22 21:19:44 INFO  FileManagerService:89 - try ro read students from file
+2017-08-22 21:19:44 ERROR FileManagerService:112 - We cannot read our subjects
+2017-08-22 21:23:09 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:23:09.800
+2017-08-22 21:23:13 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:23:17 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:23:17 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:23:18 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:23:20 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:23:20 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:23:21 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:23:24 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:23:24 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:23:25 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:23:32 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:23:34 INFO  ManagerService:53 - we add subject =  Mathemetics
+2017-08-22 21:23:35 INFO  ManagerService:53 - we add subject =  English
+2017-08-22 21:23:36 INFO  ManagerService:55 - we cannot add  subject =  Armani
+2017-08-22 21:23:36 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:23:36 INFO  ManagerService:61 - Student created!
+2017-08-22 21:23:37 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:23:42 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:23:44 INFO  ManagerService:53 - we add subject =  Mathemetics
+2017-08-22 21:23:45 INFO  ManagerService:55 - we cannot add  subject =  English
+2017-08-22 21:23:46 INFO  ManagerService:55 - we cannot add  subject =  Armani
+2017-08-22 21:23:46 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:23:46 INFO  ManagerService:61 - Student created!
+2017-08-22 21:23:50 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:23:50 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:23:50 INFO  FileManagerService:79 - Subjects are in file
+2017-08-22 21:23:52 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:23:52 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:23:52 INFO  FileManagerService:42 - Students are in file
+2017-08-22 21:23:56 INFO  FileManagerService:119 - try ro read subjects from file
+2017-08-22 21:23:56 INFO  FileManagerService:129 - We read all our subjects to list subjects
+2017-08-22 21:24:02 INFO  Run:125 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-22 21:24:18 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:24:18.126
+2017-08-22 21:24:23 INFO  FileManagerService:88 - try ro read students from file
+2017-08-22 21:24:23 ERROR FileManagerService:111 - We cannot read our subjects
+2017-08-22 21:27:29 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:27:29.879
+2017-08-22 21:28:30 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:28:30 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:28:36 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:28:36 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:28:36 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:28:38 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:28:38 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:28:39 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:28:44 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:28:46 INFO  ManagerService:53 - we add subject =  English
+2017-08-22 21:28:48 INFO  ManagerService:53 - we add subject =  Math
+2017-08-22 21:28:48 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:28:48 INFO  ManagerService:61 - Student created!
+2017-08-22 21:28:49 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:28:56 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:28:58 INFO  ManagerService:55 - we cannot add  subject =  English
+2017-08-22 21:28:59 INFO  ManagerService:53 - we add subject =  Math
+2017-08-22 21:28:59 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:28:59 INFO  ManagerService:61 - Student created!
+2017-08-22 21:29:04 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:29:04 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:29:04 INFO  FileManagerService:79 - Subjects are in file
+2017-08-22 21:29:06 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:29:06 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:29:07 INFO  FileManagerService:42 - Students are in file
+2017-08-22 21:29:09 INFO  FileManagerService:119 - try ro read subjects from file
+2017-08-22 21:29:09 INFO  FileManagerService:129 - We read all our subjects to list subjects
+2017-08-22 21:29:37 INFO  FileManagerService:88 - try ro read students from file
+2017-08-22 21:29:37 ERROR FileManagerService:111 - We cannot read our subjects
+2017-08-22 21:31:28 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:31:28.571
+2017-08-22 21:31:29 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:31:33 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:31:33 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:31:35 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:31:42 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:31:44 INFO  ManagerService:53 - we add subject =  Ukrainian
+2017-08-22 21:31:44 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:31:44 INFO  ManagerService:61 - Student created!
+2017-08-22 21:31:50 INFO  FileManagerService:88 - try ro read students from file
+2017-08-22 21:31:50 INFO  FileManagerService:109 - Our student in list
+2017-08-22 21:31:52 INFO  FileManagerService:119 - try ro read subjects from file
+2017-08-22 21:31:52 INFO  FileManagerService:129 - We read all our subjects to list subjects
+2017-08-22 21:31:55 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:31:55 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:31:55 INFO  FileManagerService:79 - Subjects are in file
+2017-08-22 21:31:59 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:31:59 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:31:59 INFO  FileManagerService:42 - Students are in file
+2017-08-22 21:32:01 INFO  FileManagerService:119 - try ro read subjects from file
+2017-08-22 21:32:01 INFO  FileManagerService:129 - We read all our subjects to list subjects
+2017-08-22 21:32:05 INFO  FileManagerService:88 - try ro read students from file
+2017-08-22 21:32:06 ERROR FileManagerService:111 - We cannot read our subjects
+2017-08-22 21:34:04 INFO  Run:125 - !!!!!!!!!!!!Close our programm!!!!!!
+2017-08-22 21:34:36 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T21:34:36.131
+2017-08-22 21:35:10 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:35:10 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:35:12 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:35:12 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:35:13 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:35:25 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:35:27 INFO  ManagerService:53 - we add subject =  Math
+2017-08-22 21:35:27 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:35:27 INFO  ManagerService:61 - Student created!
+2017-08-22 21:35:28 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:35:30 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:35:30 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:35:31 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 21:35:34 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:35:34 INFO  ManagerService:158 - Subject saved
+2017-08-22 21:35:34 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:35:40 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 21:35:41 INFO  ManagerService:53 - we add subject =  Math
+2017-08-22 21:35:42 INFO  ManagerService:53 - we add subject =  English
+2017-08-22 21:35:44 INFO  ManagerService:53 - we add subject =  Ukrainian
+2017-08-22 21:35:44 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:35:44 INFO  ManagerService:61 - Student created!
+2017-08-22 21:35:48 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:35:48 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 21:35:48 INFO  FileManagerService:79 - Subjects are in file
+2017-08-22 21:35:51 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:35:51 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 21:35:51 INFO  FileManagerService:42 - Students are in file
+2017-08-22 21:35:57 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 21:35:57 INFO  FileManagerService:31 - Json student created
+2017-08-22 21:35:57 INFO  FileManagerService:31 - Json student created
+2017-08-22 21:36:00 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 21:36:00 INFO  FileManagerService:40 - Json subject created
+2017-08-22 21:36:00 INFO  FileManagerService:40 - Json subject created
+2017-08-22 21:36:00 INFO  FileManagerService:40 - Json subject created
+2017-08-22 22:17:33 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T22:17:33.011
+2017-08-22 22:18:48 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:18:48 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 22:18:51 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:18:51 INFO  ManagerService:158 - Subject saved
+2017-08-22 22:18:53 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:18:57 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 22:18:59 INFO  ManagerService:53 - we add subject =  MAthemetics
+2017-08-22 22:18:59 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 22:18:59 INFO  ManagerService:61 - Student created!
+2017-08-22 22:19:00 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:19:06 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 22:19:07 INFO  ManagerService:53 - we add subject =  MAthemetics
+2017-08-22 22:19:07 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 22:19:07 INFO  ManagerService:61 - Student created!
+2017-08-22 22:19:11 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 22:19:11 INFO  FileManagerService:52 - Try to write list of students to file Students.txt
+2017-08-22 22:19:11 INFO  FileManagerService:79 - Subjects are in file
+2017-08-22 22:19:13 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:19:13 INFO  FileManagerService:29 - Try to write list of subjects to file Subjects.txt
+2017-08-22 22:19:13 INFO  FileManagerService:42 - Students are in file
+2017-08-22 22:19:15 INFO  FileManagerService:119 - try ro read subjects from file
+2017-08-22 22:19:15 INFO  FileManagerService:129 - We read all our subjects to list subjects
+2017-08-22 22:19:19 INFO  FileManagerService:88 - try ro read students from file
+2017-08-22 22:19:19 ERROR FileManagerService:111 - We cannot read our subjects
+2017-08-22 22:19:33 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 22:19:34 INFO  FileManagerService:31 - Json student created
+2017-08-22 22:19:34 INFO  FileManagerService:31 - Json student created
+2017-08-22 22:19:37 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:19:37 INFO  FileManagerService:40 - Json subject created
+2017-08-22 22:41:28 INFO  Main:17 - !!!!!!!!!!!Programm started!!!!!!!!!!!2017-08-22T22:41:28.715
+2017-08-22 22:41:30 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:41:30 INFO  ManagerService:154 - Try to save new subject
+2017-08-22 22:41:35 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:41:35 INFO  ManagerService:158 - Subject saved
+2017-08-22 22:41:36 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:41:41 INFO  ManagerService:43 - Try to add subject for student
+2017-08-22 22:41:42 INFO  ManagerService:53 - we add subject =  sgbdb
+2017-08-22 22:41:42 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 22:41:42 INFO  ManagerService:61 - Student created!
+2017-08-22 22:41:46 INFO  ManagerService:207 - we see all info about our student
+2017-08-22 22:41:47 INFO  FileManagerService:31 - Json student created
+2017-08-22 22:41:49 INFO  ManagerService:212 - we see all info about our subject
+2017-08-22 22:41:49 INFO  FileManagerService:40 - Json subject created

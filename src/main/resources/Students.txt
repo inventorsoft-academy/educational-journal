@@ -1,2 +1,8 @@
-1/Andriu/Perepelitsya/2017-08-21T15:29:45.031/11/2017-08-21T15:29:45.031/Subject{id=1, name='Math'} , 
+1/Andriu/Perepelitsya/2017-08-22T21:35:25.629/143/2017-08-22T21:35:25.629/Subject[ name= Math']
+1/Andriu/Perepelitsya/2017-08-22T21:35:25.629/143/2017-08-22T21:35:25.629/Subject[ name= Math']
+2/Kolya/Marchuk/2017-08-22T21:35:40.381/434/2017-08-22T21:35:40.382/Subject[ name= Math']Subject[ name= Math']Subject[ name= English']Subject[ name= Ukrainian']
+
+1/ANdriu/Perepelitsya/2017-08-22T22:18:57.924/123/2017-08-22T22:18:57.925/Subject[ name= MAthemetics']
+1/ANdriu/Perepelitsya/2017-08-22T22:18:57.924/123/2017-08-22T22:18:57.925/Subject[ name= MAthemetics']
+2/Kolya/MArkc/2017-08-22T22:19:06.052/12/2017-08-22T22:19:06.052/Subject[ name= MAthemetics']Subject[ name= MAthemetics']
 

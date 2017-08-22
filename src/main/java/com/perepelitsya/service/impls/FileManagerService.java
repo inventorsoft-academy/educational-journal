@@ -55,8 +55,7 @@ public class FileManagerService implements FileManager {
             StringBuilder sub = new StringBuilder();
             for (Student student : studentList) {
                 for (Subject a : student.getSubjects()) {
-                    sub.append(a)
-                            .append(" , ");
+                    sub.append(a);
                 }
                 line.append(student.getId())
                         .append("/")
@@ -94,8 +93,18 @@ public class FileManagerService implements FileManager {
             String[] line;
             while ((s = reader.readLine()) != null) {
                 line = s.split("/");
-                studentList.add(new Student(Integer.parseInt(line[0]), line[1], line[2], LocalDateTime.parse(line[3]),
-                        Integer.parseInt(line[4]), LocalDateTime.parse(line[5]), List.class.cast(line[6])));
+                int id = Integer.parseInt(line[0]);
+                String name = line[1];
+                String lastname = line[2];
+                LocalDateTime time = LocalDateTime.parse(line[3]);
+                int group = Integer.parseInt(line[4]);
+                LocalDateTime mark = LocalDateTime.parse(line[5]);
+                ArrayList<Subject> subs = new ArrayList<>();
+                Subject subject = new Subject();
+                String aaa = line[6];
+                subject.setName(aaa);
+                subs.add(subject);
+                studentList.add(new Student(id, name, lastname, time, group, mark,  subs));
             }
             log.info("Our student in list");
         } catch (IOException | NumberFormatException | ClassCastException e) {
@@ -115,7 +124,7 @@ public class FileManagerService implements FileManager {
             String[] line;
             while ((subject = reader.readLine()) != null) {
                 line = subject.split("/");
-                subjectList.add(new Subject(Integer.parseInt(line[1]), line[2]));
+                subjectList.add(new Subject(Integer.parseInt(line[0]), line[1]));
             }
             log.info("We read all our subjects to list subjects");
         } catch (IOException | NumberFormatException e) {
