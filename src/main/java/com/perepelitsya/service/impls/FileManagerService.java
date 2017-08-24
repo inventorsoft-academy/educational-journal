@@ -7,9 +7,10 @@ import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
+//@Component
 public class FileManagerService implements FileManager {
 
     private final static Logger log = Logger.getLogger(FileManagerService.class);
@@ -28,8 +29,8 @@ public class FileManagerService implements FileManager {
         try {
             log.info("Try to write list of subjects to file Subjects.txt");
             writer = new BufferedWriter(new FileWriter(fileWriterSubject, true));
-            StringBuilder line = new StringBuilder();
             for (Subject subject : subjectList) {
+                StringBuilder line = new StringBuilder();
                 line.append(subject.getIdOfSubject())
                         .append("/")
                         .append(subject.getName())
@@ -51,11 +52,12 @@ public class FileManagerService implements FileManager {
         try {
             log.info("Try to write list of students to file Students.txt");
             writer = new BufferedWriter(new FileWriter(fileWriter, true));
-            StringBuilder line = new StringBuilder();
-            StringBuilder sub = new StringBuilder();
             for (Student student : studentList) {
+                StringBuilder line = new StringBuilder();
+                StringBuilder sub = new StringBuilder();
                 for (Subject a : student.getSubjects()) {
-                    sub.append(a);
+                    sub.append(a.getIdOfSubject())
+                            .append(" , ");
                 }
                 line.append(student.getId())
                         .append("/")
@@ -89,6 +91,7 @@ public class FileManagerService implements FileManager {
         List<Student> studentList = new ArrayList<>();
         try {
             reader = new BufferedReader(new FileReader(fileWriter));
+            List<Subject> parsedSubject = new ArrayList<>();
             String s;
             String[] line;
             while ((s = reader.readLine()) != null) {
@@ -99,12 +102,17 @@ public class FileManagerService implements FileManager {
                 LocalDateTime time = LocalDateTime.parse(line[3]);
                 int group = Integer.parseInt(line[4]);
                 LocalDateTime mark = LocalDateTime.parse(line[5]);
-                ArrayList<Subject> subs = new ArrayList<>();
-                Subject subject = new Subject();
-                String aaa = line[6];
-                subject.setName(aaa);
-                subs.add(subject);
-                studentList.add(new Student(id, name, lastname, time, group, mark,  subs));
+
+                List<Integer> subjectIds = Arrays.stream(line[6].split(" , "))
+                        .map(Integer::valueOf)
+                        .collect(Collectors.toList());
+
+                List<Subject> subjects = readFromFileSubject();
+
+                List<Subject> studentSubjects = subjects.stream()
+                        .filter(sub -> subjectIds.contains(sub.getIdOfSubject()))
+                        .collect(Collectors.toList());
+                studentList.add(new Student(id, name, lastname, time, group, mark, studentSubjects));
             }
             log.info("Our student in list");
         } catch (IOException | NumberFormatException | ClassCastException e) {

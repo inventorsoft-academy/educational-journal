@@ -1,24 +1,23 @@
 package com.perepelitsya.demo;
 
-
-
-import org.apache.log4j.Logger;
+import com.perepelitsya.service.impls.JsonManagerService;
+import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
-
 
 /**
  * Created by Andriu on 8/14/2017.
  */
+//@SpringBootApplication
 public class Main {
-    private final static Logger log = Logger.getLogger(Main.class);
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        log.info("!!!!!!!!!!!Programm started!!!!!!!!!!!" + LocalDateTime.now());
+    public static void main(String[] args) throws ParseException, IOException {
+
         try {
             new Run().init();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }

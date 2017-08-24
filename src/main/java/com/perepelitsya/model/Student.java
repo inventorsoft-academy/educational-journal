@@ -1,12 +1,8 @@
 package com.perepelitsya.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Andriu on 8/14/2017.
@@ -16,11 +12,11 @@ import java.util.List;
 @Getter
 public class Student implements CustomValidator {
 
-    private int id;
+    private long id;
     private String firstName;
     private String lastName;
     private LocalDateTime birthDay;
-    private int group;
+    private long group;
     private LocalDateTime mark;
     private List<Subject> subjects;
 
@@ -53,22 +49,22 @@ public class Student implements CustomValidator {
     @Override
     public ArrayList<String> validate() {
         ArrayList<String> valid = new ArrayList<>();
-        if(firstName==null || firstName.length()<4 || firstName.length() > 24){
+        if (firstName == null || firstName.length() < 4 || firstName.length() > 24) {
             valid.add("firstName entered incorrectly");
         }
-        if(lastName==null || lastName.length()<4 || lastName.length() > 24){
+        if (lastName == null || lastName.length() < 4 || lastName.length() > 24) {
             valid.add("lastName entered incorrectly");
         }
-        if(birthDay==null || birthDay.getYear() <1930 || birthDay.getYear()>2017){
+        if (birthDay == null || birthDay.getYear() < 1930 || birthDay.getYear() > 2017) {
             valid.add("birthDay entered incorrectly");
         }
-        if(group==0 || group<=0 || group >= 11){
+        if (group == 0 || group <= 0 || group >= 11) {
             valid.add("group entered incorrectly");
         }
-        if(mark==null || mark.getYear()<2017 || mark.getYear() > 2017){
+        if (mark == null || mark.getYear() < 2017 || mark.getYear() > 2017) {
             valid.add("mark entered incorrectly");
         }
-        if(subjects==null || subjects.size()<1 || subjects.size() > 12){
+        if (subjects == null || subjects.size() < 1 || subjects.size() > 12) {
             valid.add("subjects entered incorrectly");
         }
 

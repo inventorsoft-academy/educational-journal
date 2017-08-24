@@ -36,12 +36,9 @@ public class ManagerService implements StudentManager, SubjectManager {
         LocalDateTime dateTime = LocalDateTime.now();
         System.out.println("Please enter mark");
         LocalDateTime mark = LocalDateTime.now();
-
         System.out.println("Please enter subject");
-
         List<Subject> subjectForStudent = new ArrayList<>();
         log.info("Try to add subject for student");
-
         //this code will be recreatted to separate method
         System.out.println("Please enter yes if you want to learn that subject, and enter no in another case");
         for (Subject subject : subjectList) {
@@ -55,17 +52,21 @@ public class ManagerService implements StudentManager, SubjectManager {
                 log.info("we cannot add  subject =  " + subject.getName());
             }
         }
-
         try {
-            studentList.add(new Student(getAllStudent().size() +1 ,firstName, lastName, dateTime, group, mark, subjectForStudent));
-            log.info("Student created!");
+            Student student = new Student(getAllStudent().size() + 1, firstName, lastName, dateTime, group, mark, subjectForStudent);
+            if (student.validate().isEmpty()) {
+                studentList.add(student);
+                log.info("Student created!");
+            } else {
+                System.out.println("You input incorrect data. Please try again");
+            }
         } catch (Exception ex) {
             log.error("Student cannot create ", ex);
         }
     }
 
     public void updateStudent() {
-        int oldGroup;
+        long oldGroup;
         LocalDateTime oldDate;
         List<Subject> oldSubjects = null;
 
@@ -95,7 +96,7 @@ public class ManagerService implements StudentManager, SubjectManager {
 
 
                     try {
-                        if(student.getSubjects()!=null) {
+                        if (student.getSubjects() != null) {
                             //this code will be recreatted to separate method
                             System.out.println("Please enter YES if you want to remove that subject, and enter NO in another case");
                             for (Subject subject : student.getSubjects()) {
@@ -109,8 +110,7 @@ public class ManagerService implements StudentManager, SubjectManager {
                                 }
                             }
                         }
-                    }
-                    catch (Exception ex){
+                    } catch (Exception ex) {
                         log.error("Student havent subjects");
                     }
 
@@ -154,8 +154,13 @@ public class ManagerService implements StudentManager, SubjectManager {
             log.info("Try to save new subject");
             System.out.println("Please enter name of subject");
             String nameOfSubject = sc.next();
-            subjectList.add(new Subject(getAllSubject().size()+1, nameOfSubject));
-            log.info("Subject saved");
+            Subject subject = new Subject(getAllSubject().size() + 1, nameOfSubject);
+            if (subject.validate().isEmpty()) {
+                subjectList.add(subject);
+                log.info("Subject saved");
+            } else {
+                System.out.println("You input incorrect data.Please try again.");
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }

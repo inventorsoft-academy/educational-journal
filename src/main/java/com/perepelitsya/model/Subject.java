@@ -1,5 +1,6 @@
 package com.perepelitsya.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 @AllArgsConstructor
 public class Subject implements CustomValidator {
 
-    private int idOfSubject;
+    private long idOfSubject;
 
     private String name;
 
@@ -24,15 +25,16 @@ public class Subject implements CustomValidator {
 
     @Override
     public String toString() {
-        return "Subject[" + " name= " + name + '\'' + ']';
+        return name;
     }
 
     @Override
     public ArrayList<String> validate() {
         ArrayList<String> valid = new ArrayList<>();
-        if(name==null || name.length()<4 || name.length() > 20){
+        if (name == null || name.length() < 4 || name.length() > 20) {
             valid.add("Subject entered incorrectly");
         }
         return valid;
     }
+
 }

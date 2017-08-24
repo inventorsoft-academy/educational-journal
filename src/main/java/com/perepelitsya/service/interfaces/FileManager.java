@@ -2,6 +2,7 @@ package com.perepelitsya.service.interfaces;
 
 import com.perepelitsya.model.Student;
 import com.perepelitsya.model.Subject;
+import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,7 +16,7 @@ public interface FileManager {
 
     void writeToFileSubject(List<Subject> subjectList) throws IOException;
 
-    List<Student>  readFromFileStudent() throws IOException;
+    List<Student>  readFromFileStudent() throws IOException, ParseException;
 
-    List<Subject>  readFromFileSubject() throws IOException;
+    List<Subject>  readFromFileSubject() throws IOException, ParseException;
 }
