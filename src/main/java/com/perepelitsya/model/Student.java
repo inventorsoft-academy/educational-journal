@@ -1,6 +1,12 @@
 package com.perepelitsya.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.perepelitsya.util.LocalDateTimeDeserializer;
+import com.perepelitsya.util.LocalDateTimeSerializer;
 import lombok.*;
+
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -15,8 +21,12 @@ public class Student implements CustomValidator {
     private long id;
     private String firstName;
     private String lastName;
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime birthDay;
     private long group;
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime mark;
     private List<Subject> subjects;
 
@@ -47,27 +57,27 @@ public class Student implements CustomValidator {
     }
 
     @Override
-    public ArrayList<String> validate() {
-        ArrayList<String> valid = new ArrayList<>();
+    public HashMap<String, String> validate() {
+        HashMap<String, String> valid = new HashMap<>();
         if (firstName == null || firstName.length() < 4 || firstName.length() > 24) {
-            valid.add("firstName entered incorrectly");
+            valid.put(firstName, "the field of firstName is incorrect");
         }
         if (lastName == null || lastName.length() < 4 || lastName.length() > 24) {
-            valid.add("lastName entered incorrectly");
+            valid.put(lastName, "the field of lastName is incorrect");
         }
         if (birthDay == null || birthDay.getYear() < 1930 || birthDay.getYear() > 2017) {
-            valid.add("birthDay entered incorrectly");
+            valid.put(String.valueOf(birthDay), "the field of birthDay is incorrect");
         }
         if (group == 0 || group <= 0 || group >= 11) {
-            valid.add("group entered incorrectly");
+            valid.put(String.valueOf(group), "the field of group is incorrect");
         }
         if (mark == null || mark.getYear() < 2017 || mark.getYear() > 2017) {
-            valid.add("mark entered incorrectly");
+            valid.put(String.valueOf(mark), "the field of mark is incorrect");
         }
         if (subjects == null || subjects.size() < 1 || subjects.size() > 12) {
-            valid.add("subjects entered incorrectly");
+            valid.put(String.valueOf(subjects), "the field of subjects is incorrect");
         }
-
         return valid;
     }
+
 }

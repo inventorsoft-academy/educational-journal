@@ -1,11 +1,9 @@
 package com.perepelitsya.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by Andriu on 8/14/2017.
@@ -13,6 +11,7 @@ import java.util.ArrayList;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonFormat(shape = JsonFormat.Shape.STRING)
 public class Subject implements CustomValidator {
 
     private long idOfSubject;
@@ -29,12 +28,11 @@ public class Subject implements CustomValidator {
     }
 
     @Override
-    public ArrayList<String> validate() {
-        ArrayList<String> valid = new ArrayList<>();
+    public HashMap<String, String> validate() {
+        HashMap<String, String> valid = new HashMap<>();
         if (name == null || name.length() < 4 || name.length() > 20) {
-            valid.add("Subject entered incorrectly");
+            valid.put(name, "Incorrect value of name subject");
         }
         return valid;
     }
-
 }

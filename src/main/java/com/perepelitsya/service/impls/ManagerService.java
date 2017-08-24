@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 
@@ -58,6 +59,9 @@ public class ManagerService implements StudentManager, SubjectManager {
                 studentList.add(student);
                 log.info("Student created!");
             } else {
+                for(Map.Entry<String , String> map : student.validate().entrySet()) {
+                    System.out.println( map.getValue() + ". False: " + map.getKey());
+                }
                 System.out.println("You input incorrect data. Please try again");
             }
         } catch (Exception ex) {
@@ -159,7 +163,9 @@ public class ManagerService implements StudentManager, SubjectManager {
                 subjectList.add(subject);
                 log.info("Subject saved");
             } else {
-                System.out.println("You input incorrect data.Please try again.");
+                for(Map.Entry<String , String> map : subject.validate().entrySet()) {
+                    System.out.println(map.getValue() + ". False: " + map.getKey()  );
+                }                System.out.println("You input incorrect data.Please try again.");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
