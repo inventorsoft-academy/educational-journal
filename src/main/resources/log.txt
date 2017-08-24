@@ -166,3 +166,14 @@
 2017-08-24 19:49:53 INFO  ManagerService:160 - Subject saved
 2017-08-24 19:52:25 INFO  ManagerService:217 - we see all info about our subject
 2017-08-24 19:52:28 INFO  ManagerService:212 - we see all info about our student
+2017-08-24 21:21:17 INFO  ManagerService:73 - Lets find student who will be update
+2017-08-24 21:21:20 INFO  ManagerService:217 - we see all info about our subject
+2017-08-24 21:21:20 INFO  ManagerService:154 - Try to save new subject
+2017-08-24 21:21:25 INFO  ManagerService:217 - we see all info about our subject
+2017-08-24 21:21:25 INFO  ManagerService:160 - Subject saved
+2017-08-24 21:21:26 INFO  ManagerService:217 - we see all info about our subject
+2017-08-24 21:21:30 INFO  ManagerService:41 - Try to add subject for student
+2017-08-24 21:21:32 INFO  ManagerService:50 - we add subject =  Mathmetics
+2017-08-24 21:21:32 INFO  ManagerService:212 - we see all info about our student
+2017-08-24 21:21:32 INFO  ManagerService:59 - Student created!
+2017-08-24 21:21:35 INFO  ManagerService:212 - we see all info about our student

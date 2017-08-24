@@ -31,32 +31,44 @@ public class JsonManagerService implements FileManager {
     DateTimeFormatter formatterDateForMark = DateTimeFormatter.ofPattern("MM-dd HH:mm");
 
 
+//
+//    @Override
+//    public void writeToFileStudent(List<Student> studentList) throws IOException {
+////
+////        for (Student student : studentList) {
+////            JSONObject jsonObject = new JSONObject();
+////            jsonObject.put("id", student.getId());
+////            jsonObject.put("firstName", student.getFirstName());
+////            jsonObject.put("lastName", student.getLastName());
+////            jsonObject.put("birthDay", student.getBirthDay().format(formatterDateForBirthday));
+////            jsonObject.put("group", student.getGroup());
+////            jsonObject.put("mark", student.getMark().format(formatterDateForMark));
+////            for (Subject subject : student.getSubjects()) {
+////                JSONArray jsonArray = new JSONArray();
+////                jsonArray.add(subject.getIdOfSubject());
+////                jsonArray.add(subject.getName());
+////                jsonObject.put("subjects", jsonArray);
+////            }
+////            try (FileWriter file = new FileWriter(studentFile)) {
+////                file.write(jsonObject.toJSONString());
+////                file.flush();
+////                log.info("Json subject created");
+////            } catch (IOException e) {
+////                e.printStackTrace();
+////            }
+////        }
+//
+//        final CollectionLikeType listType = objectMapper.getTypeFactory().constructCollectionLikeType(List.class, Student.class);
+//        for (Student student : studentList) {
+//            objectMapper.writeValue(studentFile, student);
+//        }
+//
+//    }
 
     @Override
     public void writeToFileStudent(List<Student> studentList) throws IOException {
-
-        for (Student student : studentList) {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("id", student.getId());
-            jsonObject.put("firstName", student.getFirstName());
-            jsonObject.put("lastName", student.getLastName());
-            jsonObject.put("birthDay", student.getBirthDay().format(formatterDateForBirthday));
-            jsonObject.put("group", student.getGroup());
-            jsonObject.put("mark", student.getMark().format(formatterDateForMark));
-            for (Subject subject : student.getSubjects()) {
-                JSONArray jsonArray = new JSONArray();
-                jsonArray.add(subject.getIdOfSubject());
-                jsonArray.add(subject.getName());
-                jsonObject.put("subjects", jsonArray);
-            }
-            try (FileWriter file = new FileWriter(studentFile)) {
-                file.write(jsonObject.toJSONString());
-                file.flush();
-                log.info("Json subject created");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.writeValue(new File(studentFile), studentList);
     }
 
     @Override
