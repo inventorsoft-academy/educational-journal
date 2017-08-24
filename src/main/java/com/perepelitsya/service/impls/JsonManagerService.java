@@ -1,6 +1,7 @@
 package com.perepelitsya.service.impls;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.CollectionLikeType;
 import com.perepelitsya.model.Student;
 import com.perepelitsya.model.Subject;
 import com.perepelitsya.service.interfaces.FileManager;
@@ -29,7 +30,6 @@ public class JsonManagerService implements FileManager {
     DateTimeFormatter formatterDateForBirthday = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     DateTimeFormatter formatterDateForMark = DateTimeFormatter.ofPattern("MM-dd HH:mm");
 
-    ObjectMapper mapper = new ObjectMapper();
 
 
     @Override
@@ -77,36 +77,38 @@ public class JsonManagerService implements FileManager {
 
     @Override
     public List<Student> readFromFileStudent() throws IOException, ParseException {
-        List<Student> studentList = new ArrayList<>();
-        try {
-            FileReader reader = new FileReader(studentFile);
-            JSONParser jsonParser = new JSONParser();
-            JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
-            long id = (long) jsonObject.get("id");
-            String firstName = (String) jsonObject.get("firstName");
-            String lastName = (String) jsonObject.get("lastName");
-            long group = (long) jsonObject.get("group");
-
-
-
-            JSONArray subjectList = (JSONArray) jsonObject.get("subjects");
-            List<Subject> subjects = new ArrayList<>();
-            for (Object o : subjectList)
-            {
-                JSONObject sub = (JSONObject) o;
-                long idOfSub = (long) sub.get("id");
-                String name = (String) sub.get("nameOfSubject");
-                Subject subject = new Subject(idOfSub, name);
-                subjects.add(subject);
-            }
-            LocalDateTime mark = (LocalDateTime) jsonObject.get("mark");
-            LocalDateTime birthDay = LocalDateTime.parse((CharSequence) jsonObject.get("birthDay"));
-            studentList.add(new Student(id, firstName, lastName, birthDay, group, mark, subjects));
-        } catch (IOException | ParseException | NullPointerException| ClassCastException ex) {
-            ex.printStackTrace();
-        }
-        return studentList;
-
+//        List<Student> studentList = new ArrayList<>();
+//        try {
+//            FileReader reader = new FileReader(studentFile);
+//            JSONParser jsonParser = new JSONParser();
+//            JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
+//            long id = (long) jsonObject.get("id");
+//            String firstName = (String) jsonObject.get("firstName");
+//            String lastName = (String) jsonObject.get("lastName");
+//            long group = (long) jsonObject.get("group");
+//
+//
+//
+//            JSONArray subjectList = (JSONArray) jsonObject.get("subjects");
+//            List<Subject> subjects = new ArrayList<>();
+//            for (Object o : subjectList)
+//            {
+//                JSONObject sub = (JSONObject) o;
+//                long idOfSub = (long) sub.get("id");
+//                String name = (String) sub.get("nameOfSubject");
+//                Subject subject = new Subject(idOfSub, name);
+//                subjects.add(subject);
+//            }
+//            LocalDateTime mark = (LocalDateTime) jsonObject.get("mark");
+//            LocalDateTime birthDay = LocalDateTime.parse((CharSequence) jsonObject.get("birthDay"));
+//            studentList.add(new Student(id, firstName, lastName, birthDay, group, mark, subjects));
+//        } catch (IOException | ParseException | NullPointerException| ClassCastException ex) {
+//            ex.printStackTrace();
+//        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        final CollectionLikeType listType = objectMapper.getTypeFactory().constructCollectionLikeType(List.class, Student.class);
+        List<Student> students = objectMapper.readValue(studentFile, listType);
+        return students;
     }
 
     @Override
