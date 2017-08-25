@@ -5,6 +5,7 @@ import com.perepelitsya.model.Subject;
 import com.perepelitsya.service.interfaces.StudentManager;
 import com.perepelitsya.service.interfaces.SubjectManager;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -17,6 +18,7 @@ import java.util.Scanner;
 /**
  * Created by Andriu on 8/14/2017.
  */
+@Component
 public class ManagerService implements StudentManager, SubjectManager {
 
     private final static Logger log = Logger.getLogger(ManagerService.class);
@@ -29,6 +31,10 @@ public class ManagerService implements StudentManager, SubjectManager {
 
     Scanner sc = new Scanner(System.in);
 
+
+    public void deleteStudentById(long id) {
+        studentList.remove(id);
+    }
 
     public void saveStudent() {
         int sizeOfStudentsArray = studentList.size();
@@ -67,8 +73,8 @@ public class ManagerService implements StudentManager, SubjectManager {
                 studentList.add(student);
                 log.info("Student created!");
             } else {
-                for(Map.Entry<String , String> map : student.validate().entrySet()) {
-                    System.out.println( map.getValue() + ". False: " + map.getKey());
+                for (Map.Entry<String, String> map : student.validate().entrySet()) {
+                    System.out.println(map.getValue() + ". False: " + map.getKey());
                 }
                 System.out.println("You input incorrect data. Please try again");
             }
@@ -162,6 +168,10 @@ public class ManagerService implements StudentManager, SubjectManager {
         }
     }
 
+    public Student getStudentById(long id) {
+        return studentList.get((int) id);
+    }
+
     public void saveSubject() {
         try {
             log.info("Try to save new subject");
@@ -172,9 +182,10 @@ public class ManagerService implements StudentManager, SubjectManager {
                 subjectList.add(subject);
                 log.info("Subject saved");
             } else {
-                for(Map.Entry<String , String> map : subject.validate().entrySet()) {
-                    System.out.println(map.getValue() + ". False: " + map.getKey()  );
-                }                System.out.println("You input incorrect data.Please try again.");
+                for (Map.Entry<String, String> map : subject.validate().entrySet()) {
+                    System.out.println(map.getValue() + ". False: " + map.getKey());
+                }
+                System.out.println("You input incorrect data.Please try again.");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -221,6 +232,15 @@ public class ManagerService implements StudentManager, SubjectManager {
         } catch (Exception ex) {
             log.error("Cannot remove subject with number " + idOfSubject);
         }
+    }
+
+
+    public void deleteSubjectById(long id) {
+        subjectList.remove(id);
+    }
+
+    public Subject getSubjectById(long id) {
+        return subjectList.get((int) id);
     }
 
     public List<Student> getAllStudent() {

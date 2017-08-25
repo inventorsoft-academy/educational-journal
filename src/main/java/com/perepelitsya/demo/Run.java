@@ -5,7 +5,6 @@ import com.perepelitsya.service.impls.JsonManagerService;
 import com.perepelitsya.service.impls.ManagerService;
 import com.perepelitsya.service.interfaces.FileManager;
 import org.apache.log4j.Logger;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -13,7 +12,6 @@ import java.util.Scanner;
 /**
  * Created by Andriu on 8/14/2017.
  */
-//@Component
 public class Run {
 
     private final static Logger log = Logger.getLogger(Run.class);
@@ -21,11 +19,10 @@ public class Run {
     Scanner sc = new Scanner(System.in);
     boolean flag = true;
 
-    //    @Autowired
-    private ManagerService Nataly = new ManagerService();
+    ManagerService Nataly = new ManagerService();
 
 
-    public void init() throws IOException, ParseException {
+    public void init() throws IOException {
         while (flag) {
             System.out.println("\n1 - Create new Student\n2 - Update Student\n3 - Delete Student\n4 - Create new Subject\n" +
                     "5 - Update Subject\n6 - Delete Subject\n7 - GetAllStudent\n8 - GetAllSubject\n" +
@@ -70,9 +67,10 @@ public class Run {
                         System.out.println("1 - Write&Read to Txt\n2 - Write&Read to Json\n3 - Back to menu");
                         switch (sc.nextInt()) {
                             case 1:
-                                FileManager Igor = new FileManagerService();
                                 boolean tr = true;
                                 while (tr) {
+                                    FileManager Igor = new FileManagerService();
+
                                     System.out.println("1-Write to file student\n2-Read from file studet\n3-Write to file subject\n" +
                                             "4-Read from file subject\n5-Back to menu");
                                     switch (sc.nextInt()) {
@@ -98,9 +96,9 @@ public class Run {
                                 }
                                 break;
                             case 2:
-                                FileManager IgorPoradkin = new JsonManagerService();
                                 boolean flagForTwoCase = true;
                                 while (flagForTwoCase) {
+                                    FileManager IgorPoradkin = new JsonManagerService();
                                     System.out.println("1-Write to json student\n2-Read from json studet\n3-Write to json subject\n" +
                                             "4-Read from json subject\n5-Back to menu");
                                     switch (sc.nextInt()) {
