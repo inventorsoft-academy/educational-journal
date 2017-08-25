@@ -32,7 +32,7 @@ public class Subject implements CustomValidator {
     public HashMap<String, String> validate() {
         HashMap<String, String> valid = new HashMap<>();
         if (name == null || name.length() < 4 || name.length() > 20) {
-            valid.put(name, "Incorrect value of name subject");
+            valid.put(name, "Incorrect value of name subject\nName cannot be null. Name must be more than 4 and less than 20");
         }
         return valid;
     }
