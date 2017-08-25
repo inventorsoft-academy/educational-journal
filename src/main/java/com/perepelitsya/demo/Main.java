@@ -1,7 +1,6 @@
 package com.perepelitsya.demo;
 
 import com.perepelitsya.custom.MyLog4J;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 
@@ -13,7 +12,7 @@ import java.io.IOException;
  * Use my custom Logger
  */
 public class Main {
-    public static void main(String[] args) throws ParseException, IOException {
+    public static void main(String[] args) throws  IOException {
         MyLog4J log = new MyLog4J("src\\main\\resources\\sub.txt");
         log.setLevel(MyLog4J.CONSOLE_FILE);
 

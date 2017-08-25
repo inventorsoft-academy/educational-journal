@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * Created by Andriu on 8/22/2017.
  */
-public class CustomList<E> implements List<E> {
+public class CustomList< E extends Comparable<E>> implements List<E> {
 
     //size of mylist
     private int size = 0;
@@ -27,6 +27,11 @@ public class CustomList<E> implements List<E> {
         list = new Object[capacity];
     }
 
+
+    @Override
+    public String toString() {
+        return Arrays.toString(list);
+    }
 
     @Override
     public int size() {
@@ -89,8 +94,9 @@ public class CustomList<E> implements List<E> {
         return elem;
     }
 
-    public void sortToMax(E[] element){
-        Arrays.sort(element);
+    public void sortToMax(){
+        Arrays.sort(list, 0, size);
+
     }
 
     @Override

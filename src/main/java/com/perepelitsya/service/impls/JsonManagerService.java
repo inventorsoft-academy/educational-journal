@@ -6,11 +6,9 @@ import com.perepelitsya.model.Student;
 import com.perepelitsya.model.Subject;
 import com.perepelitsya.service.interfaces.FileManager;
 import org.apache.log4j.Logger;
-import org.json.simple.parser.ParseException;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +60,7 @@ public class JsonManagerService implements FileManager {
     public void writeToFileStudent(List<Student> studentList) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writeValue(new File(studentFile), studentList);
-        log.info("Students wrote to file");
+        log.info("Students wrote to file ");
     }
 
     @Override
@@ -86,7 +84,7 @@ public class JsonManagerService implements FileManager {
     }
 
     @Override
-    public List<Student> readFromFileStudent() throws IOException, ParseException {
+    public List<Student> readFromFileStudent() throws IOException{
 //
 //                List<Student> studentList = new ArrayList<>();
 //        try {
@@ -123,7 +121,7 @@ public class JsonManagerService implements FileManager {
     }
 
     @Override
-    public List<Subject> readFromFileSubject() throws IOException, ParseException {
+    public List<Subject> readFromFileSubject() throws IOException{
 //        List<Subject> subjectList = new ArrayList<>();
 //        try {
 //            FileReader fileReader = new FileReader(subjectFile);

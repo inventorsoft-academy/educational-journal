@@ -5,7 +5,7 @@ import com.perepelitsya.service.impls.JsonManagerService;
 import com.perepelitsya.service.impls.ManagerService;
 import com.perepelitsya.service.interfaces.FileManager;
 import org.apache.log4j.Logger;
-import org.json.simple.parser.ParseException;
+
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -25,7 +25,7 @@ public class Run {
     private ManagerService Nataly = new ManagerService();
 
 
-    public void init() throws IOException, ParseException {
+    public void init() throws IOException  {
         while (flag) {
             System.out.println("\n1 - Create new Student\n2 - Update Student\n3 - Delete Student\n4 - Create new Subject\n" +
                     "5 - Update Subject\n6 - Delete Subject\n7 - GetAllStudent\n8 - GetAllSubject\n" +
