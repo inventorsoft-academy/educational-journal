@@ -23,8 +23,7 @@ public class JsonManagerService implements FileManager {
     private final static Logger log = Logger.getLogger(FileManagerService.class);
     private final static String studentFile = "src\\main\\resources\\student.json";
     private final static String subjectFile = "src\\main\\resources\\subject.json";
-    DateTimeFormatter formatterDateForBirthday = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    DateTimeFormatter formatterDateForMark = DateTimeFormatter.ofPattern("MM-dd HH:mm");
+
 
     //
 //    @Override

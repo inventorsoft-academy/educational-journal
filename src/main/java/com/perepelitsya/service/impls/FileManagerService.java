@@ -42,8 +42,8 @@ public class FileManagerService implements FileManager {
             writer.close();
             log.info("Students are in file");
         } catch (IOException ex) {
-            log.info("Cannot to write list of subjects to file Subjects.txt" + ex.getMessage());
-            ex.printStackTrace();
+            log.error("Cannot to write list of subjects to file Subjects.txt" + ex.getMessage());
+
         }
     }
 
@@ -81,7 +81,6 @@ public class FileManagerService implements FileManager {
             log.info("Subjects are in file");
         } catch (IOException ex) {
             log.error("Cannot  to write list of students to file Students.txt" + ex.getMessage());
-            ex.printStackTrace();
         }
     }
 
@@ -116,8 +115,7 @@ public class FileManagerService implements FileManager {
             }
             log.info("Our student in list");
         } catch (IOException | NumberFormatException | ClassCastException e) {
-            log.error("We cannot read our subjects");
-            e.printStackTrace();
+            log.error("We cannot read our subjects " + e.getMessage() );
         }
         return studentList;
     }
@@ -136,8 +134,7 @@ public class FileManagerService implements FileManager {
             }
             log.info("We read all our subjects to list subjects");
         } catch (IOException | NumberFormatException e) {
-            log.error("We cannot read our subjects");
-            e.printStackTrace();
+            log.error("We cannot read our subjects " + e.getMessage());
         }
         return subjectList;
     }

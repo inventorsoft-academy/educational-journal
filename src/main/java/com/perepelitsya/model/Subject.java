@@ -1,6 +1,7 @@
 package com.perepelitsya.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.perepelitsya.custom.CustomValidator;
 import lombok.*;
 
 import java.util.HashMap;

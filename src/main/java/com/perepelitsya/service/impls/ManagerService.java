@@ -7,6 +7,7 @@ import com.perepelitsya.service.interfaces.SubjectManager;
 import org.apache.log4j.Logger;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,10 +21,14 @@ public class ManagerService implements StudentManager, SubjectManager {
 
     private final static Logger log = Logger.getLogger(ManagerService.class);
 
+    DateTimeFormatter formatterDateForBirthday = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    DateTimeFormatter formatterDateForMark = DateTimeFormatter.ofPattern("MM-dd HH:mm");
+
     private List<Student> studentList = new ArrayList<>();
     private List<Subject> subjectList = new ArrayList<>();
 
     Scanner sc = new Scanner(System.in);
+
 
     public void saveStudent() {
         int sizeOfStudentsArray = studentList.size();
@@ -35,8 +40,10 @@ public class ManagerService implements StudentManager, SubjectManager {
         int group = Integer.parseInt(sc.next());
         System.out.println("Please enter birthDay");
         LocalDateTime dateTime = LocalDateTime.now();
+        dateTime.format(formatterDateForBirthday);
         System.out.println("Please enter mark");
         LocalDateTime mark = LocalDateTime.now();
+        mark.format(formatterDateForMark);
         System.out.println("Please enter subject");
         List<Subject> subjectForStudent = new ArrayList<>();
         log.info("Try to add subject for student");
@@ -51,6 +58,7 @@ public class ManagerService implements StudentManager, SubjectManager {
                 log.info("we add subject =  " + subject.getName());
             } else if ("No".equalsIgnoreCase(ansver)) {
                 log.info("we cannot add  subject =  " + subject.getName());
+
             }
         }
         try {
@@ -92,6 +100,7 @@ public class ManagerService implements StudentManager, SubjectManager {
                     System.out.println("Please enter mark");
                     oldDate = student.getMark();
                     LocalDateTime time = LocalDateTime.now();
+                    time.format(formatterDateForMark);
                     student.setMark(time);
                     log.info("we change mark " + oldDate + " to = " + time);
 

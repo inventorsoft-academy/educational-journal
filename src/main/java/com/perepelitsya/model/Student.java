@@ -1,8 +1,8 @@
 package com.perepelitsya.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.perepelitsya.custom.CustomValidator;
 import com.perepelitsya.util.LocalDateTimeDeserializer;
 import com.perepelitsya.util.LocalDateTimeSerializer;
 import lombok.*;

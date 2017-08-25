@@ -1,4 +1,4 @@
-package com.perepelitsya.model;
+package com.perepelitsya.custom;
 
 import java.util.ArrayList;
 import java.util.HashMap;
