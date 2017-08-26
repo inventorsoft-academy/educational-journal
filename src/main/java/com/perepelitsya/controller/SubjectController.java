@@ -15,44 +15,32 @@ import java.util.List;
  */
 @AllArgsConstructor
 @RestController
-@RequestMapping(value = "subject")
+@RequestMapping(value = "/subjects")
 public class SubjectController {
 
     private ManagerService managerService;
 
-    @RequestMapping(value = "/getAll", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<Subject> getAll() {
         return managerService.getAllSubject();
     }
 
-    @RequestMapping(value = "save", method = RequestMethod.POST)
+    @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Subject> saveSubject(@RequestBody Subject subject) {
-        managerService.saveSubject();
+        managerService.saveSubject(subject);
         return new ResponseEntity<Subject>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "deleteBy{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Subject> delete(@PathVariable("id") long id) {
-        try {
-            managerService.deleteSubjectById(id);
-        } catch (Exception e) {
-            return new ResponseEntity<Subject>(HttpStatus.BAD_REQUEST);
-        }
-        return new ResponseEntity<Subject>(HttpStatus.CREATED);
 
+    @RequestMapping(value = "{subjectId:\\d+}", method = RequestMethod.DELETE)
+    public ResponseEntity<Subject> delete(@PathVariable long subjectId) {
+        managerService.deleteSubjectById(subjectId);
+        return new ResponseEntity<Subject>(HttpStatus.OK);
     }
 
-
-    @RequestMapping(value = "getBy{id}", method = RequestMethod.GET)
-    public ResponseEntity<Subject> getById(@PathVariable("id") long id) {
-        try {
-            managerService.getSubjectById(id);
-        } catch (Exception e) {
-            return new ResponseEntity<Subject>(HttpStatus.BAD_REQUEST);
-        }
-        return new ResponseEntity<Subject>(HttpStatus.CREATED);
+    @RequestMapping(value = "{subjectId:\\d+}", method = RequestMethod.GET)
+    public ResponseEntity<Subject> getById(@PathVariable long subjectId) {
+        return new ResponseEntity<Subject>(managerService.getSubjectById(subjectId), HttpStatus.OK);
     }
-
-
 }
