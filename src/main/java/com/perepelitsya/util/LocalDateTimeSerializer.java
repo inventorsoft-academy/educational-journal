@@ -14,6 +14,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class LocalDateTimeSerializer extends JsonSerializer<LocalDateTime> {
     DateTimeFormatter formatterDateForBirthday = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
     @Override
 
     public void serialize(LocalDateTime date, JsonGenerator gen, SerializerProvider provider) throws IOException, JsonProcessingException {
