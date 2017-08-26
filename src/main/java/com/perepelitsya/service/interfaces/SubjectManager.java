@@ -8,11 +8,12 @@ import java.util.List;
  * Created by Andriu on 8/21/2017.
  */
 public interface SubjectManager {
-    void saveSubject();
 
-    void updateSubject();
+    void saveSubject(Subject subject);
 
-    void removeSubject();
+    Subject getSubjectById(long id);
+
+    void deleteSubjectById(long id);
 
     List<Subject> getAllSubject();
 

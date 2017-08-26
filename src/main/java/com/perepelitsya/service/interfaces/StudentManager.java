@@ -1,7 +1,6 @@
 package com.perepelitsya.service.interfaces;
 
 import com.perepelitsya.model.Student;
-import com.perepelitsya.model.Subject;
 
 import java.util.List;
 
@@ -10,11 +9,11 @@ import java.util.List;
  */
 public interface StudentManager {
 
-    void saveStudent();
+    void saveStudent(Student student);
 
-    void updateStudent();
+    void deleteStudentById(long id);
 
-    void removeStudent();
+    Student getStudentById(long id);
 
     List<Student> getAllStudent();
 
