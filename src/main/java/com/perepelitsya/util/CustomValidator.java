@@ -1,6 +1,5 @@
-package com.perepelitsya.custom;
+package com.perepelitsya.util;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
