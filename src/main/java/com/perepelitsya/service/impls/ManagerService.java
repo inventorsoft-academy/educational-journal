@@ -23,6 +23,7 @@ public class ManagerService implements StudentManager, SubjectManager {
 
     public void saveStudent(Student student) {
         if (student.validate().isEmpty()) {
+            student.setId(studentList.size()+1);
             studentList.add(student);
         } else {
             log.info("you cannot add new student.\nPS. Validator");
@@ -36,6 +37,7 @@ public class ManagerService implements StudentManager, SubjectManager {
 
     public void saveSubject(Subject subject) {
         if (subject.validate().isEmpty()) {
+            subject.setIdOfSubject(subjectList.size()+1);
             subjectList.add(subject);
         } else {
             log.info("you cannot add new subject.\nPS. Validator");

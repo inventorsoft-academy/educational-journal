@@ -16,8 +16,8 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 @RequestMapping(value = "/students")
-//@CrossOrigin(origins = "*", methods = {RequestMethod.GET,
-//        RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET,
+        RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 
 public class StudentController {
 
@@ -33,19 +33,19 @@ public class StudentController {
     @RequestMapping(value = "", method = RequestMethod.POST)
     public ResponseEntity<Student> saveStudent(@RequestBody Student student) {
         managerService.saveStudent(student);
-        return new ResponseEntity<Student>(HttpStatus.OK);
+        return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
 
-    @RequestMapping(value = "{studentId:\\d+}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{studentId:\\d+}", method = RequestMethod.DELETE)
     public ResponseEntity<Student> delete(@PathVariable long studentId) {
         managerService.deleteStudentById(studentId);
-        return new ResponseEntity<Student>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
-    @RequestMapping(value = "{studentId:\\d+}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{studentId:\\d+}", method = RequestMethod.GET)
     public ResponseEntity<Student> getById(@PathVariable long studentId) {
-        return new ResponseEntity<Student>(managerService.getStudentById(studentId), HttpStatus.OK);
+        return new ResponseEntity<>(managerService.getStudentById(studentId), HttpStatus.OK);
     }
 }
