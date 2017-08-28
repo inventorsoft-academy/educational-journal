@@ -16,6 +16,9 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 @RequestMapping(value = "/students")
+//@CrossOrigin(origins = "*", methods = {RequestMethod.GET,
+//        RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+
 public class StudentController {
 
     private ManagerService managerService;

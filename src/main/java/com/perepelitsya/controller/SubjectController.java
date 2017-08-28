@@ -16,11 +16,13 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 @RequestMapping(value = "/subjects")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET,
+        RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class SubjectController {
 
     private ManagerService managerService;
 
-    @RequestMapping(value = "", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<Subject> getAll() {
         return managerService.getAllSubject();
