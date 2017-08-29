@@ -21,13 +21,9 @@ public class Mark implements CustomValidator {
 
     private int mark;
 
-
     @Override
     public String toString() {
-        return "Mark{" +
-                "subject=" + subject +
-                ", mark=" + mark +
-                '}';
+        return "Name: " + subject.getName() + ", mark=" + mark;
     }
 
     @Override

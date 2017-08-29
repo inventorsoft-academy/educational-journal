@@ -37,7 +37,6 @@ public class Student implements CustomValidator {
 
     private List<Mark> marks;
 
-
     @Override
     public String toString() {
         return "Student{" +
@@ -67,9 +66,9 @@ public class Student implements CustomValidator {
         if (group == 0 || group <= 0 || group > 12) {
             valid.put(String.valueOf(group), "the field of group is incorrect\nGroup cannot be null. Group must be more than 0 and less than 12");
         }
-        if (marks == null || marks.size() < 1 || marks.size() > 12) {
-            valid.put(String.valueOf(marks), "the field of subjects is incorrect\nSubjects cannot be null");
-        }
+//        if (marks == null || marks.size() < 1 || marks.size() > 12) {
+//            valid.put(String.valueOf(marks), "the field of subjects is incorrect\nSubjects cannot be null");
+//        }
         return valid;
     }
 }

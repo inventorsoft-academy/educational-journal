@@ -1,22 +1,28 @@
 # CREATE DATABASE Journal;
 
-CREATE TABLE  `student` (
-  `idstudent` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE  STUDENTS (
+  `id` SERIAL,
   `firstname` VARCHAR(45) NOT NULL,
   `lastname` VARCHAR(45) NOT NULL,
   `birthday` DATE NOT NULL,
   `group` INT NOT NULL,
-  PRIMARY KEY (`idstudent`));
+  PRIMARY KEY (`id`));
 
-CREATE TABLE `mark`(
-`idstudent` INT ,
-`idsubject` INT ,
-`mark`   INT ,
-FOREIGN KEY (idstudent) REFERENCES student(idstudent),
-FOREIGN KEY (idsubject) REFERENCES subject(idsubject)
+
+
+CREATE TABLE MARKS(
+  id SERIAL,
+student_id INT ,
+subject_id INT ,
+mark   INT ,
+FOREIGN KEY (student_id) REFERENCES student(idstudent),
+FOREIGN KEY (subject_id) REFERENCES subject(idsubject),
+  PRIMARY KEY (id)
 );
 
-CREATE TABLE `subject` (
-  `idsubject` INT NOT NULL AUTO_INCREMENT,
-  `nameofsubject` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idsubject`));
+
+
+CREATE TABLE SUBJECTS (
+  id SERIAL,
+  nameofsubject VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));

@@ -34,7 +34,6 @@ public class SubjectController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-
     @RequestMapping(value = "/{subjectId:\\d+}", method = RequestMethod.DELETE)
     public ResponseEntity<Subject> delete(@PathVariable long subjectId) {
         managerService.deleteSubjectById(subjectId);

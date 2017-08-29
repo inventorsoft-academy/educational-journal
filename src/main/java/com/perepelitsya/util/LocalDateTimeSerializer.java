@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
  * Created by Andriu on 8/24/2017.
  */
 public class LocalDateTimeSerializer extends JsonSerializer<LocalDateTime> {
-    DateTimeFormatter formatterDateForBirthday = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+    DateTimeFormatter formatterDateForBirthday = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @Override
 
