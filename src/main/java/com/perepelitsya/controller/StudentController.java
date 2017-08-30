@@ -1,6 +1,5 @@
 package com.perepelitsya.controller;
 
-import com.perepelitsya.model.Mark;
 import com.perepelitsya.model.Student;
 import com.perepelitsya.service.impls.ManagerService;
 import lombok.AllArgsConstructor;
@@ -38,8 +37,8 @@ public class StudentController {
     }
 
     @RequestMapping(value = "/{studentId:\\d+}", method = RequestMethod.PUT)
-    public ResponseEntity<Student> addMarkToStudent(@PathVariable long id, @RequestBody Mark mark) {
-        managerService.addMarksToStudent(id, mark);
+    public ResponseEntity<Student> addMarkToStudent(@PathVariable long id, @PathVariable long subject_id, @PathVariable long mark) {
+        managerService.addMarksToStudent(id, subject_id, (int) mark);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 //
