@@ -9,6 +9,7 @@ import com.perepelitsya.service.interfaces.SubjectManager;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,53 +21,40 @@ public class ManagerService implements StudentManager, SubjectManager, MarkManag
 
     private List<Student> studentList = new ArrayList<>();
     private List<Subject> subjectList = new ArrayList<>();
-//    private List<Mark> markList = new ArrayList<>();
 
-    //    @Override
-//    public void addMark(Student student, int mark) {
-//        for (Student addMarkSt : studentList) {
-//            if (student.equals(addMarkSt)) {
-//                for (Subject addSub : subjectList) {
-//                    Mark markToList = new Mark();
-//                    markToList.setSubject(addSub);
-//                    markToList.setMark(mark);
-//                    markList.add(markToList);
-//                    student.setMarks(markList);}}}}
 
-    @Override
-    public void addMarksToStudent(long id, Mark mark) {
-        ArrayList<Mark> markArrayList = new ArrayList<>();
-        for (Student student : studentList) {
-            if (student.getId() == id) {
-                if (mark.validate().isEmpty()) {
-                    for (Subject subject : subjectList) {
-                        mark.setSubject(subject);
-                        markArrayList.add(mark);
+    public void addMarksToStudent(long id, long subject_id, int mark) {
+        try {
+            Mark studentMark = new Mark();
+            for (Subject subject : subjectList) {
+                if (subject.getIdOfSubject() == subject_id) {
+                    studentMark.setSubject(subject);
+                    studentMark.setMark(mark);
+                    log.info("add mark into method");
+                }
+            }
+            if (studentMark.validate().isEmpty()) {
+                ArrayList<Mark> markArrayList = new ArrayList<>();
+                for (Student student : studentList) {
+                    if (student.getId() == id) {
+                        markArrayList.add(studentMark);
+                        log.info("try to add mark to list to st");
                         student.setMarks(markArrayList);
-                    }
-                } else {
-                    log.info("you cannot add new mark.\nPS. Validator");
-                    for (Map.Entry<String, String> map : mark.validate().entrySet()) {
-                        System.out.println(map.getValue() + ". False: " + map.getKey());
+                    } else {
+                        System.out.println("Student dont exist");
                     }
                 }
             } else {
-                System.out.println("Student dont exist");
+                log.info("you cannot add new mark.\nPS. Validator");
+                for (Map.Entry<String, String> map : studentMark.validate().entrySet()) {
+                    System.out.println(map.getValue() + ". False: " + map.getKey());
+                }
             }
+        } catch (Exception e) {
+            log.error("Failed");
         }
     }
 
-//    public void addMarksToStudent(long id, Mark mark) {
-//        ArrayList<Mark> markArrayList = new ArrayList<>();
-//        for (Student student : studentList) {
-//            if (student.getId() == id) {
-//                saveMark(mark);
-//                student.setMarks(markList);
-////                markArrayList.add(saveMark(mark));
-////                student.setMarks(markArrayList);
-//            }
-//        }
-//    }
 
     public void saveStudent(Student student) {
         if (student.validate().isEmpty()) {

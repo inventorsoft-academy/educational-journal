@@ -36,17 +36,13 @@ public class StudentController {
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{studentId:\\d+}", method = RequestMethod.PUT)
-    public ResponseEntity<Student> addMarkToStudent(@PathVariable long id, @PathVariable long subject_id, @PathVariable long mark) {
-        managerService.addMarksToStudent(id, subject_id, (int) mark);
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Student> addMarkToStudent( @PathVariable long id,
+                                                     @RequestParam(value = "subject_id", required = true) long subject_id,
+                                                     @RequestParam(value="mark", required=true) int mark) {
+        managerService.addMarksToStudent(id, subject_id,  mark);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-//
-//    @RequestMapping(value = "", method = RequestMethod.PUT)
-//    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
-//        managerService.updateStudent(student);
-//        return new ResponseEntity<>(student, HttpStatus.OK);
-//    }
 
     @RequestMapping(value = "/{studentId:\\d+}", method = RequestMethod.DELETE)
     public ResponseEntity<Student> delete(@PathVariable long studentId) {
