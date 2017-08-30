@@ -1,0 +1,7 @@
+<div class="container" style="width: 35%;">
+  <form [formGroup]="newSubjectForm" (submit)="saveSubject()">
+    <label for="name">Name</label>
+    <input formControlName="name" id="name" class="form-control">
+    <button type="submit" class="btn btn-primary" [disabled]="newSubjectForm.invalid">Save subject</button>
+  </form>
+</div>

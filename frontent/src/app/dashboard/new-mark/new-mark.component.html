@@ -1,0 +1,18 @@
+<div class="container" style="width: 35%;">
+  <form [formGroup]="newMarkForm" (submit)="addMarkToStudent(id)">
+
+    <label for="mark">mark</label>
+    <input formControlName="mark" id="mark" class="form-control">
+
+
+    <label for="subjects">subjects</label>
+    <input formControlName="subjects" id="subjects" class="form-control">
+
+    <select class="selectpicker"  *ngFor="let subject of subjectList">
+      <option>{{subject.name}}</option>
+    </select>
+
+
+    <button type="submit" class="btn btn-primary" [disabled]="newMarkForm.invalid">Save mark</button>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+<div class="container" style="width: 35%;">
+  <form [formGroup]="newStudentForm" (submit)="saveStudent()">
+
+
+    <label for="firstName">FirstName</label>
+    <input formControlName="firstName" id="firstName" class="form-control">
+
+
+    <label for="lastName">LastName</label>
+    <input formControlName="lastName" id="lastName" class="form-control">
+
+
+    <label for="birthDay">BirthDay</label>
+    <input formControlName="birthDay" id="birthDay" class="form-control">
+
+
+    <label for="group">Group</label>
+    <input formControlName="group" id="group" class="form-control">
+
+
+
+    <button type="submit" class="btn btn-primary" [disabled]="newStudentForm.invalid">Save student</button>
+  </form>
+</div>

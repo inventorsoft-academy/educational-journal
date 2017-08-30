@@ -1,0 +1,15 @@
+<h1>All subjects</h1>
+<table class="table table-responsive">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let subject of subjectList" (click)="showSubjectDetails(subject.idOfSubject)" >
+    <td>{{subject.idOfSubject}}</td>
+    <td>{{subject.name}}</td>
+  </tr>
+  </tbody>
+</table>

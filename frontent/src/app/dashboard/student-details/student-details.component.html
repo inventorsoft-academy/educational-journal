@@ -1,0 +1,25 @@
+<div class="container">
+  <div>Id: {{student?.id}}</div>
+  <div>firstName: {{student?.firstName}}</div>
+  <div>lastName: {{student?.lastName}}</div>
+  <div>Birthday: {{student?.birthDay}}</div>
+  <div>Group: {{student?.group}}</div>
+  <div>Mark: {{student?.marks.values()}}</div>
+  <button type="button" class="btn btn-primary" (click)="addMark(student.id)">ADD MARK</button>
+</div>
+
+
+
+
+
+<!--<div>-->
+<!--Subjects:-->
+<!--<ul>-->
+<!--<li *ngFor="let student of student?.student">-->
+<!--{{student}}-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+
+
+

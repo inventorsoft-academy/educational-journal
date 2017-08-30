@@ -1,0 +1,23 @@
+<h1 >All student</h1>
+<table class="table table-responsive">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Birthday</th>
+    <th>Group</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of studentList" (click)="showStudentDetails(student.id)">
+    <td>{{student.id}}</td>
+    <td>{{student.firstName}}</td>
+    <td>{{student.lastName}}</td>
+    <td>{{student.birthDay}}</td>
+    <td>{{student.group}}</td>
+  </tr>
+  </tbody>
+</table>
+
